@@ -1,0 +1,7 @@
+@hostname = http://localhost:8000
+
+GET {{hostname}}/test
+
+### 
+
+DELETE {{hostname}}/test
