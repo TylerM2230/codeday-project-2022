@@ -10,5 +10,6 @@ describe("makePostRequest", () => {
             res.end("My post test");
         })
         expect(allRequests.length).toEqual(1)
+        console.log(allRequests);
     })
 })

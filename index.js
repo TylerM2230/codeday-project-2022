@@ -4,7 +4,7 @@ const app = serverFramework();
 const PORT = 5000;
 const HOST = "localhost";
 
-let inMemData = {};
+let inMemData = {"hello" : "world"};
 
 app.makeGetRequest("/", (req, res) => {
   res.writeHead(200);
@@ -16,12 +16,13 @@ app.makeGetRequest("/data", (req, res) => {
   res.end(JSON.stringify(inMemData));
 });
 
-// app.makePostRequest("/data", (req, res) => {
-//   const data = req.data;
-//   inMemData = data;
-//   res.writeHead(200);
-//   res.end("POST request done");
-// });
+app.makePostRequest("/data", (req, res) => {
+  const data = req.data;
+  inMemData = data;
+  res.writeHead(200);
+  res.end("POST request done");
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://${HOST}:${PORT}`);
