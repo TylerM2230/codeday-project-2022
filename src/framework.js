@@ -34,6 +34,7 @@ function framework() {
     // .listen() method
     listen(PORT, HOST, callback) {
       server.listen(PORT, HOST, callback);
+      console.log(`Server is running on http://${HOST}:${PORT}`);
     },
   };
 }

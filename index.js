@@ -16,14 +16,14 @@ app.makeGetRequest("/data", (req, res) => {
   res.end(JSON.stringify(inMemData));
 });
 
-app.makePostRequest("/data", (req, res) => {
-  const data = req.data;
-  inMemData = data;
-  res.writeHead(200);
-  res.end("POST request done");
-});
+// app.makePostRequest("/data", (req, res) => {
+//   // const data = req.data;
+//   // inMemData = data;
+//   res.writeHead(200);
+//   res.end("POST request done");
+// });
 
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://${HOST}:${PORT}`);
+app.listen(PORT, HOST, () => {
+  //console.log(`Server is running on http://${HOST}:${PORT}`);
 });
