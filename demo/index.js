@@ -1,4 +1,4 @@
-const serverFramework = require("./src/framework");
+const serverFramework = require("../src/framework");
 
 const app = serverFramework();
 const PORT = 5000;
@@ -25,5 +25,5 @@ app.makeGetRequest("/data", (req, res) => {
 
 
 app.listen(PORT, HOST, () => {
-  //console.log(`Server is running on http://${HOST}:${PORT}`);
+  console.log(`Server is running on http://${HOST}:${PORT}`);
 });

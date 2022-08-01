@@ -15,7 +15,7 @@ describe("makePostRequest", () => {
     test("check if the right method is implemented", () => {
         const allRequests = []
         const makePostRequest = makePostRequestGenerator(allRequests)
-        makePostRequest('/put', function (req, res) {
+        makePostRequest('/post', function (req, res) {
             res.writeHead(200);
             res.end("My post test");
         })
@@ -30,7 +30,7 @@ describe("makePostRequest", () => {
         const makePostRequest = makePostRequestGenerator(allRequests)
         makePostRequest('/post', function (req, res) {
             res.writeHead(200);
-            res.end("My put test");
+            res.end("My post test");
         })
         req = {url : "/post", method : "GET"}
         res = {writeHead : jest.fn(), end : jest.fn()}

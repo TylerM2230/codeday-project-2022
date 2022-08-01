@@ -14,13 +14,13 @@ function framework() {
   const server = http.createServer(requestListener);
 
   return {
-    // makePostRequest(url, callback) {
-    //   allRequests.push(function (req, res) {
-    //     if (url === req.url && req.method === "PUT") {
-    //       callback(req, res);
-    //     }
-    //   });
-    // },
+    makePostRequest(url, callback) {
+      allRequests.push(function (req, res) {
+        if (url === req.url && req.method === "PUT") {
+          callback(req, res);
+        }
+      });
+    },
     
     // GET Request
     makeGetRequest(url, callback) {
@@ -34,7 +34,7 @@ function framework() {
     // .listen() method
     listen(PORT, HOST, callback) {
       server.listen(PORT, HOST, callback);
-      console.log(`Server is running on http://${HOST}:${PORT}`);
+      //console.log(`Server is running on http://${HOST}:${PORT}`);
     },
   };
 }
