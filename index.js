@@ -1,14 +1,14 @@
-const serverFramework = require("./src/framework");
+const onsed = require("./src/onsed");
 
-const app = serverFramework();
-const PORT = 5000;
+const app = onsed();
+const PORT = 8000;
 const HOST = "localhost";
 
 let inMemData = {};
 
 app.makeGetRequest("/", (req, res) => {
   res.writeHead(200);
-  res.end("hello world");
+  res.end("hello world!");
 });
 
 app.makeGetRequest("/data", (req, res) => {
@@ -16,13 +16,14 @@ app.makeGetRequest("/data", (req, res) => {
   res.end(JSON.stringify(inMemData));
 });
 
-// app.makePostRequest("/data", (req, res) => {
-//   const data = req.data;
-//   inMemData = data;
-//   res.writeHead(200);
-//   res.end("POST request done");
-// });
+app.makePostRequest("/data", (req, res) => {
+  const data = req.data;
+  inMemData = data;
+  res.writeHead(200);
+  res.end("POST request done");
+  console.log(inMemData);
+});
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Server is running on http://${HOST}:${PORT}`);
 });

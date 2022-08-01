@@ -1,13 +1,22 @@
 const http = require("http");
 const makePostRequestGenerator = require("./util/makePostRequestGenerator");
+const makeGetRequestGenerator = require("./util/makeGetRequestGenerator");
 
-function framework() {
+function onsed() {
   const allRequests = [];
-  const makePostRequest = makePostRequestGenerator(allRequests);
 
   const requestListener = function (req, res) {
     allRequests.forEach((request) => {
       request(req, res);
+    });
+
+    let data = "";
+    req.on("data", (chunk) => {
+      data += chunk;
+    });
+    req.on("end", () => {
+      console.log(data);
+      res.end();
     });
   };
 
@@ -15,14 +24,9 @@ function framework() {
 
   return {
     // GET Request
-    makeGetRequest(url, callback) {
-      allRequests.push(function (req, res) {
-        if (url === req.url && req.method === "GET") {
-          callback(req, res);
-        }
-      });
-    },
-
+    makeGetRequest: makeGetRequestGenerator(allRequests),
+    // POST Request
+    makePostRequest: makePostRequestGenerator(allRequests),
     // .listen() method
     listen(PORT, HOST, callback) {
       server.listen(PORT, HOST, callback);
@@ -30,4 +34,4 @@ function framework() {
   };
 }
 
-module.exports = framework;
+module.exports = onsed;
