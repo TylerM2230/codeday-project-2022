@@ -1,10 +1,10 @@
 const http = require("http");
+
 const makePostRequestGenerator = require("./util/makePostRequestGenerator");
 const makeGetRequestGenerator = require("./util/makeGetRequestGenerator");
 
 function onsed() {
   const allRequests = [];
-
   const requestListener = function (req, res) {
     allRequests.forEach((request) => {
       request(req, res);
