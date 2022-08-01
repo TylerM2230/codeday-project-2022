@@ -5,7 +5,7 @@ const app = onsed();
 const PORT = 8000;
 const HOST = "localhost";
 
-let inMemData = { hello: "world" };
+let inMemData = {};
 
 app.makeGetRequest("/", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
@@ -31,7 +31,7 @@ app.makePostRequest("/data", (req, res) => {
   inMemData = data;
   res.writeHead(200);
   res.end("POST request done");
-  console.log(inMemData);
+  console.log(req.data);
 });
 
 app.listen(PORT, HOST, () => {

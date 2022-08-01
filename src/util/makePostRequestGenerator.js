@@ -1,10 +1,20 @@
 const makePostRequestGenerator = (allRequests) => {
-    return (url, callback) => {
+  return (url, callback) => {
     allRequests.push(function (req, res) {
-        if (url === req.url && req.method === 'POST'){
-            callback(req, res);
-        }
-    })
-}}
+      if (url === req.url && req.method === "POST") {
+        callback(req, res);
+      }
 
-module.exports = makePostRequestGenerator
+      let data = "";
+      req.on("data", (chunk) => {
+        data += chunk;
+      });
+      req.on("end", () => {
+        res.end();
+      });
+      req.data = data;
+    });
+  };
+};
+
+module.exports = makePostRequestGenerator;
