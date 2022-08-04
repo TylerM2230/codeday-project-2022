@@ -1,9 +1,5 @@
-<<<<<<< HEAD:demo/index.js
-const serverFramework = require("../src/framework");
-=======
-const onsed = require("./src/onsed");
+const onsed = require("../src/onsed");
 const fs = require("fs");
->>>>>>> main:index.js
 
 const app = onsed();
 const PORT = 8000;
@@ -30,25 +26,14 @@ app.makeGetRequest("/data", (req, res) => {
   console.log(inMemData);
 });
 
-<<<<<<< HEAD:demo/index.js
-// app.makePostRequest("/data", (req, res) => {
-//   // const data = req.data;
-//   // inMemData = data;
-//   res.writeHead(200);
-//   res.end("POST request done");
-// });
-
-
-=======
 app.makePostRequest("/data", (req, res) => {
   const data = req.data;
   inMemData = data;
   res.writeHead(200);
   res.end("POST request done");
-  console.log(req.data);
+  console.log(inMemData);
 });
 
->>>>>>> main:index.js
 app.listen(PORT, HOST, () => {
   console.log(`Server is running on http://${HOST}:${PORT}`);
 });
