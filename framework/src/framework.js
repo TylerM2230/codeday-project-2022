@@ -1,11 +1,12 @@
 const http = require("http");
 
+const makeStaticGenerator = require("./util/makeStaticGenerator");
 const makePostRequestGenerator = require("./util/makePostRequestGenerator");
 const makeGetRequestGenerator = require("./util/makeGetRequestGenerator");
 const makeDeleteRequestGenerator = require("./util/makeDeleteRequestGenerator");
 const makePutRequestGenerator = require("./util/makePutRequestGenerator");
 
-function onsed() {
+function framework() {
   const allRequests = [];
 
   const requestListener = function (req, res) {
@@ -17,6 +18,7 @@ function onsed() {
   const server = http.createServer(requestListener);
 
   return {
+    static: makeStaticGenerator(allRequests),
     // GET Request
     makeGetRequest: makeGetRequestGenerator(allRequests),
     // POST Request
@@ -32,4 +34,4 @@ function onsed() {
   };
 }
 
-module.exports = onsed;
+module.exports = framework;
