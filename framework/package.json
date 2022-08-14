@@ -1,5 +1,5 @@
 {
-  "name": "framework",
+  "name": "onsed",
   "version": "1.0.0",
   "description": "Web framework project for Codeday Internship",
   "main": "index.js",
@@ -12,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/cpark50/codeday-project-2022.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tyler M, Jonathan R, Cindy P",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cpark50/codeday-project-2022/issues"
   },

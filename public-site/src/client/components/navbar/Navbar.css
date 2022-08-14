@@ -21,14 +21,55 @@ i {
 
 .navbar-logo {
   padding: 15px;
-  color: #e6e6e6;
+  color: gray;
 }
 
 .navbar-mainbg {
-  background-color: #3d4c41;
+  background-color: white;
   padding: 0px;
 }
 
-#nav-link.active {
-  color: #e6e6e6;
+.nav-link:hover {
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link.active {
+  color: black;
+}
+
+.nav-menu {
+  margin-right: 1rem;
+}
+
+.hamburg-icon {
+  display: none;
+}
+
+@media screen and (max-width: 976px) {
+  .hamburg-icon {
+    display: inline;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    left: 60vw;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hidden {
+    display: none;
+  }
 }

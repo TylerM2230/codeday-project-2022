@@ -6308,16 +6308,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framework@1.0.0, framework@workspace:framework":
-  version: 0.0.0-use.local
-  resolution: "framework@workspace:framework"
-  dependencies:
-    jest: ^28.1.3
-    mime: ^3.0.0
-    nodemon: ^2.0.19
-  languageName: unknown
-  linkType: soft
-
 "fresh@npm:0.5.2":
   version: 0.5.2
   resolution: "fresh@npm:0.5.2"
@@ -6617,6 +6607,15 @@ __metadata:
   dependencies:
     duplexer: ^0.1.2
   checksum: 2df97f359696ad154fc171dcb55bc883fe6e833bca7a65e457b9358f3cb6312405ed70a8da24a77c1baac0639906cd52358dc0ce2ec1a937eaa631b934c94194
+  languageName: node
+  linkType: hard
+
+"hamburger-react@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "hamburger-react@npm:2.5.0"
+  peerDependencies:
+    react: ^16.8 || ^17 || ^18
+  checksum: 5c3835a1b271fd50f5fcc600d55d0dc296cb05c2eed5ec4bf6386c3da6f5b33a370f6ff5b81ebe97f29beb41cc37f5f5d4c5ff958507435e6561a15c8f7e3562
   languageName: node
   linkType: hard
 
@@ -9394,6 +9393,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"onsed@1.0.0, onsed@workspace:framework":
+  version: 0.0.0-use.local
+  resolution: "onsed@workspace:framework"
+  dependencies:
+    jest: ^28.1.3
+    mime: ^3.0.0
+    nodemon: ^2.0.19
+  languageName: unknown
+  linkType: soft
+
 "open@npm:^8.0.9, open@npm:^8.4.0":
   version: 8.4.0
   resolution: "open@npm:8.4.0"
@@ -10692,8 +10701,8 @@ __metadata:
     eslint-config-react-app: ^7.0.1
     eslint-webpack-plugin: ^3.1.1
     file-loader: ^6.2.0
-    framework: 1.0.0
     fs-extra: ^10.0.0
+    hamburger-react: ^2.5.0
     html-webpack-plugin: ^5.5.0
     identity-obj-proxy: ^3.0.0
     jest: ^27.4.3
@@ -10701,6 +10710,7 @@ __metadata:
     jest-watch-typeahead: ^1.0.0
     jquery: ^3.6.0
     mini-css-extract-plugin: ^2.4.5
+    onsed: 1.0.0
     postcss: ^8.4.4
     postcss-flexbugs-fixes: ^5.0.2
     postcss-loader: ^6.2.1
