@@ -32,6 +32,7 @@ i {
 .nav-link:hover {
   background-color: gray;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .navbar-nav .nav-link.active {
@@ -40,6 +41,10 @@ i {
 
 .nav-menu {
   margin-right: 1rem;
+}
+
+a {
+  text-align: center;
 }
 
 .hamburg-icon {
@@ -55,8 +60,8 @@ i {
     position: fixed;
     top: 65px;
     right: 0;
-    left: 60vw;
-    margin: 0 auto;
+    left: 68vw;
+    margin: 0 0;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
