@@ -8,7 +8,7 @@
     "framework",
     "public-site"
   ],
-  "scripts" : {
+  "scripts": {
     "postinstall": "yarn workspace public-site build",
     "start": "yarn workspace public-site start"
   }
