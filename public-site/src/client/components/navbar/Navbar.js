@@ -1,34 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { Divide as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-mainbg">
-      <div>
+      <NavLink className="navbar-brand navbar-logo mb-0 h1" to="/" exact>
+        onsed
+      </NavLink>
+      <div className={`nav-menu ${show ? "" : "hidden"}`}>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <NavLink className="nav-link" to="/" exact>
-              <i className="fas fa-tachometer-alt"></i>Home
+              Home
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink className="nav-link" to="/docs" exact>
-              <i className="far fa-address-book"></i>Docs
+              Docs
             </NavLink>
           </li>
 
           <li className="nav-item">
             <NavLink className="nav-link" to="/examples" exact>
-              <i className="far fa-address-book"></i>Examples
+              Examples
             </NavLink>
           </li>
         </ul>
       </div>
-      <NavLink className="navbar-brand navbar-logo" to="/" exact>
-        Framework
-      </NavLink>
+      <div className={`hamburg-icon`}>
+        <Hamburger
+          rounded
+          onToggle={(toggled) => {
+            if (toggled) {
+              setShow(true);
+            } else {
+              setShow(false);
+            }
+          }}
+        />
+      </div>
     </nav>
   );
 };
