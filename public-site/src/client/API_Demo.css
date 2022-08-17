@@ -1,0 +1,75 @@
+.API-Test {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+.API-Title {
+    width: 280px;
+    height: 76px;
+
+
+    font-family: 'IBM Plex Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    text-decoration-line: underline;
+
+    color: #0063B2;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.API-Logo{
+    width: 50px;
+    height: 47px;
+
+
+    background: #FFFFFF;
+    border: 3px solid #0063B2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.Onsed-Text {
+    position: absolute;
+    width: 50px;
+    height: 17px;
+    left: 1419px;
+    top: 1021px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #0063B2;
+}
+.API_Demo-header {
+    width: 541px;
+    height: 53px;
+    background: #0B0085;
+    
+    font-family: 'IBM Plex Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+}
+
+.API_Demo-body {
+    width: 541px;
+    height: 392px;
+    background: #0B0085;
+    font-family: 'IBM Plex Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    white-space: pre;
+}
