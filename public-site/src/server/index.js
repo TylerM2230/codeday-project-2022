@@ -1,10 +1,10 @@
-const onsed = require("framework");
+const onsed = require("onsed");
 const fs = require("fs");
 const path = require('path');
 
 const app = onsed();
-const PORT = 8000;
-const HOST = "localhost";
+const PORT = process.env.PORT || 8000;
+const HOST = "0.0.0.0";
 
 let inMemData = {};
 

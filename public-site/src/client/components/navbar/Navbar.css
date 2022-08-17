@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #999999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  padding: 15px;
+  color: black;
+}
+
+.navbar-mainbg {
+  background-color: white;
+  padding: 0px;
+}
+
+.nav-link:hover {
+  background-color: gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.navbar-nav .nav-link.active {
+  color: black;
+}
+
+.nav-menu {
+  margin-right: 1rem;
+}
+
+a {
+  text-align: center;
+}
+
+.hamburg-icon {
+  display: none;
+}
+
+@media screen and (max-width: 976px) {
+  .hamburg-icon {
+    display: inline;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    left: 68vw;
+    margin: 0 0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

@@ -7,5 +7,9 @@
   "workspaces": [
     "framework",
     "public-site"
-  ]
+  ],
+  "scripts": {
+    "heroku-postbuild": "yarn workspace public-site build",
+    "start": "yarn workspace public-site start"
+  }
 }
