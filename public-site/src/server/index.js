@@ -1,4 +1,4 @@
-const onsed = require("framework");
+const onsed = require("onsed");
 const fs = require("fs");
 const path = require('path');
 
