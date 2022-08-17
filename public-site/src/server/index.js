@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = onsed();
 const PORT = process.env.PORT || 8000;
-const HOST = "localhost";
+const HOST = "0.0.0.0";
 
 let inMemData = {};
 
