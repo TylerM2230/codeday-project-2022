@@ -1,21 +1,18 @@
 const onsed = require("onsed");
 const fs = require("fs");
-const path = require("path");
+const path = require('path');
 
 const app = onsed();
-
-const PORT = 8080;
-const HOST = "localhost";
-
+const PORT = process.env.PORT || 8000;
+const HOST = "0.0.0.0";
 
 let inMemData = {};
 
-const pathToBuild = path.join(__dirname, "..", "..", "build");
+
+const pathToBuild = path.join(__dirname, '..', '..', 'build');
 
 if (!fs.existsSync(pathToBuild)) {
-  console.error(
-    "You have not built your server, run `yarn build` before starting the server"
-  );
+  console.error('You have not built your server, run `yarn build` before starting the server');
 
   process.exit(1);
 }
@@ -39,7 +36,7 @@ app.makeGetRequest("/", (req, res) => {
 app.makeGetRequest("/data", (req, res) => {
   res.writeHead(200);
   res.end(JSON.stringify(inMemData));
-  console.log(pathToBuild);
+  console.log(inMemData);
 });
 
 app.makePostRequest("/data", (req, res) => {
