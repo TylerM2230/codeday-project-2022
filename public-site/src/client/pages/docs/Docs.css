@@ -1,0 +1,39 @@
+ul{
+    color:white
+}
+
+li:hover{
+    color: black;
+}
+
+hr{
+    background: white;  
+    color: white;
+    borderColor : white;
+    height : 3px;
+}
+
+h3 p u {
+    color: white;
+    margin-bottom: 0;
+}
+
+
+
+/* STYLING SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 1vw; /* THIS WILL RESET THE DEFAULT SCORLLBAR STYLING */
+  }
+  
+  /* TO STYLE THE SCROLLBAR TRACK */
+  ::-webkit-scrollbar-track {
+    background-color: black; /* THIS WILL SET THE COLOR OF THE SCROLLBAR TRACK */
+  }
+  
+  /* TO STYLE THE SCROLLBAR THUMB */
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border: 0.3vw solid black;
+    border-radius: 5vw;
+  }
