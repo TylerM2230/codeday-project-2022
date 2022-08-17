@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+    align-items: center;
+}
+
+.text-center {
+    color: "white";
+    padding-top: 30%;
+}
+
+.code-snippet {
+    background-color: rgb(217, 217, 217);
+    border-radius: 5px;
+    max-width: fit-content ;
+    padding: 12px 24px;
+    
+}
+
+.go-to-docs {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
