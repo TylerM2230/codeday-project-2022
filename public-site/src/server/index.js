@@ -8,7 +8,6 @@ const PORT = 8080;
 const HOST = "0.0.0.0";
 
 let inMemData = {};
-
 const pathToBuild = path.join(__dirname, "..", "..", "build");
 
 if (!fs.existsSync(pathToBuild)) {
