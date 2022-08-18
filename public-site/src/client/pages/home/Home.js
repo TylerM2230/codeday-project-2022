@@ -5,7 +5,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 
-
 const Home = () => {
   return (
     <div className="container">
@@ -15,7 +14,10 @@ const Home = () => {
       >
         onsed.js
       </h1>
-      <p className="text-sm-center font-weight-bold text-light lead mb-4">
+      <p
+        className="text-sm-center font-italic text-light lead mb-4"
+        style={{ fontStyle: "italic" }}
+      >
         a minimalist, unopinionated <br></br>framework for Node.js
       </p>
       <div className="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
@@ -48,7 +50,7 @@ const Home = () => {
           Read Docs
         </NavLink>
       </div>
-      <p className="text-center text-muted mb-0 fs-10">
+      <p className="text-center text-muted mb-0 fs-10 p-0">
         <strong>v1.0.0</strong>
       </p>
     </div>
