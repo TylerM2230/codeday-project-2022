@@ -1,8 +1,10 @@
 import React from "react";
 import { FaRegCopy, FaDollarSign } from "react-icons/fa";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+
 import "./Home.css";
 import { NavLink } from "react-router-dom";
+
 
 const Home = () => {
   return (
