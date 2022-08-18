@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { Divide as Hamburger } from "hamburger-react";
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -10,6 +11,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-mainbg">
       <NavLink className="navbar-brand navbar-logo mb-0 h1" to="/" exact>
         onsed
+        <FaAngleDoubleUp />
       </NavLink>
       <div className={`nav-menu ${show ? "" : "hidden"}`}>
         <ul className="navbar-nav ml-auto">
