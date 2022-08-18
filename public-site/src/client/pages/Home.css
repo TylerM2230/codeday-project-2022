@@ -8,19 +8,27 @@
     padding-top: 30%;
 }
 
-.code-snippet {
+@media (min-width: 768px) {
+    .col-sm-code {
     background-color: rgb(217, 217, 217);
     border-radius: 5px;
-    max-width: fit-content ;
     padding: 12px 24px;
-    
-}
-
-.go-to-docs {
-    background-color: black;
-    border-radius: 5px;
-    color: white;
     width: fit-content;
+    margin-right: 1em;
+    
+    }
+
+    .col-sm-docs {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        width: fit-content;
+    }
+
+    .col-sm-code, .col-sm-docs {
+        position: relative;
+    }
+
 }
 
 a {
