@@ -1,0 +1,13 @@
+.install{
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    padding: auto;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 25px;
+}
+
+#copy-button:hover{
+    background-color: blue;
+}
