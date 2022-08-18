@@ -1,0 +1,36 @@
+.container {
+    text-align: center;
+    align-items: center;
+}
+
+.text-center {
+    color: "white";
+    padding-top: 30%;
+}
+
+@media (min-width: 768px) {
+    .col-sm-code {
+    background-color: rgb(217, 217, 217);
+    border-radius: 5px;
+    width: fit-content;
+    margin-right: 1em;
+    
+    }
+
+    .col-sm-docs {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        width: fit-content;
+    }
+
+    .col-sm-code, .col-sm-docs {
+        position: relative;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

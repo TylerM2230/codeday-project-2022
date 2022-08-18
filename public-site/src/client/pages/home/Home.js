@@ -1,26 +1,29 @@
 import React from "react";
 import { FaRegCopy } from "react-icons/fa";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { FaAlignJustify } from "react-icons/fa";
+import './Home.css'
+
 const Home = () => {
   return (
     <div className="container">
-      <h1 className="text-center" style={{ paddingTop: "15%", color: "white" }}>
-        onsed.js
-      </h1>
-      <h3 className="text-center font-italic">
-        a minimalist, unopinionated <br></br> framework for Node.js
-      </h3>
-      <div className="row">
-        <div className="col">
-          <CopyToClipboard text={"npm i onsed@1.0.0"}>
+      <h1 className="text-center">  
+      <p>onsed.js</p></h1>
+      {/* logo */}
+      <h2 style={{color:"white"}}><i>a minimal, unopinionated <br/>web framework</i></h2>
+      <br/>
+        <div class="row">
+          <div class="col-sm-code" >
+          <pre><code><CopyToClipboard text={"npm i onsed@1.0.0"}>
             <FaRegCopy />
-          </CopyToClipboard>
+          </CopyToClipboard> $ npm i onsed@1.0.0</code></pre>
+          </div>
+          <div class="col-sm-docs"><a href='./Docs'> <FaAlignJustify/> Read Docs</a>
+          </div>
         </div>
-        <div className="col">
-          <button>Read Docs</button>
-        </div>
-      </div>
-      <h5 className="text-center">Current: v1.0.0</h5>
+        <br/>
+      <p><u>Current: v1.0.0</u></p>
+
     </div>
   );
 };
