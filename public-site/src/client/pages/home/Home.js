@@ -5,7 +5,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 
-
 const Home = () => {
   return (
     <div className="container">
@@ -48,7 +47,7 @@ const Home = () => {
           Read Docs
         </NavLink>
       </div>
-      <p className="text-center text-muted mb-0 fs-10">
+      <p className="text-center text-muted mb-0 fs-10 p-0">
         <strong>v1.0.0</strong>
       </p>
     </div>
