@@ -18,7 +18,6 @@ const Home = () => {
       </div>
       </div>
       <p><u>Current: v1.0.0</u></p>
-      
     </div>
   );
 };
