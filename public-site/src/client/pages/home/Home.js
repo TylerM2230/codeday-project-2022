@@ -8,6 +8,11 @@ const Home = () => {
       <h3 className="text-center font-italic">
         a minimalist, unopinionated <br></br> framework for Node.js
       </h3>
+      <div className="row">
+        <div className="col">left</div>
+        <div className="col">right</div>
+      </div>
+      <p className="text-center">Current: v1.0.0</p>
     </div>
   );
 };
