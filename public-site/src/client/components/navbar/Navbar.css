@@ -19,6 +19,30 @@ i {
   justify-content: space-between;
 }
 
+.navbar-logo:hover{
+  animation: shake 0.8s;
+}
+
+@keyframes shake{
+  0%{
+    transform: translateX(0)
+  }
+  25%{
+    transform: translateX(25px);
+  }
+    
+  50%{
+    transform: translateX(-25px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.navbar-brand:hover svg{
+  transform: rotate(90deg);
+}
+
 .navbar-logo {
   padding: 15px;
   color: black;
