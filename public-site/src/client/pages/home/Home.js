@@ -14,7 +14,10 @@ const Home = () => {
       >
         onsed.js
       </h1>
-      <p className="text-sm-center font-weight-bold text-light lead mb-4">
+      <p
+        className="text-sm-center font-italic text-light lead mb-4"
+        style={{ fontStyle: "italic" }}
+      >
         a minimalist, unopinionated <br></br>framework for Node.js
       </p>
       <div className="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
