@@ -35,7 +35,7 @@ const Home = () => {
                 <code className="language-sh" data-lang="sh">
                   <span className="line">
                     <span className="cl" style={{ marginRight: ".5rem" }}>
-                      npm i onsed@1.0.0
+                      npm i onsed
                     </span>
                   </span>
                 </code>
@@ -43,7 +43,7 @@ const Home = () => {
             </div>
           </div>
           <div style={{ cursor: "pointer" }}>
-            <CopyToClipboard text={"npm i onsed@1.0.0"}>
+            <CopyToClipboard text={"npm i onsed"}>
               <FaRegCopy size={25} />
             </CopyToClipboard>
           </div>
