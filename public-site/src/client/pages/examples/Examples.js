@@ -36,38 +36,36 @@ const Examples = () => {
             <h1>Hello World!</h1>
             <hr />
             <p>
-              Amet non excepteur ut fugiat ullamco nostrud ea Lorem. Nostrud
-              labore consequat nostrud qui officia do exercitation exercitation
-              officia incididunt minim excepteur. Ut consequat quis aute
-              adipisicing non amet sit esse irure ex occaecat Lorem dolore
-              laboris. Non Lorem excepteur aute commodo voluptate velit nostrud
-              incididunt.
+              The example below creates a web server that displays the text
+              "Hello World!" on the home screen. The framework module is
+              imported using the require() syntax and an instance of it is
+              called and referred to as app by convention. A route for a GET
+              request is then configured using the makeGetRequest() method. The
+              '/'' denotes the home page and the callback functions sends the
+              text "Hello World!" as a response.
             </p>
             <SyntaxHighlighter
               language="javascript"
               style={atomDark}
             >{`const onsed = require('onsed')
 const app = onsed()
-const PORT = 3000
+const PORT = process.env.PORT || 8080
 
-app.get('/', (req, res) => {
+app.makeGetRequest('/', (req, res) => {
   res.send('Hello World!')
 })
 
 app.listen(PORT, () => {
-  console.log(\`Example app listening on port \${PORT}\`)
+  console.log(\`Server running on port \${PORT}\`)
 }`}</SyntaxHighlighter>
           </div>
           <div ref={basicRouting}>
             <h1>Basic Routing</h1>
             <hr />
             <p>
-              Amet non excepteur ut fugiat ullamco nostrud ea Lorem. Nostrud
-              labore consequat nostrud qui officia do exercitation exercitation
-              officia incididunt minim excepteur. Ut consequat quis aute
-              adipisicing non amet sit esse irure ex occaecat Lorem dolore
-              laboris. Non Lorem excepteur aute commodo voluptate velit nostrud
-              incididunt.
+              Basic routes can be set up by configuring the routes for each
+              corresponding HTTP method. The format is as follows:
+              .make(HTTP-Method)Request
             </p>
             <SyntaxHighlighter
               language="javascript"
@@ -96,25 +94,22 @@ app.makeDeleteRequest('/', (req, res) => {
             <h1>Serve static files</h1>
             <hr />
             <p>
-              Amet non excepteur ut fugiat ullamco nostrud ea Lorem. Nostrud
-              labore consequat nostrud qui officia do exercitation exercitation
-              officia incididunt minim excepteur. Ut consequat quis aute
-              adipisicing non amet sit esse irure ex occaecat Lorem dolore
-              laboris. Non Lorem excepteur aute commodo voluptate velit nostrud
-              incididunt.
+              Static files can be served by simply utilizing the .static()
+              method and giving the path to the file as an argument. In this
+              instance, the given filepath refers to the static directory. When
+              the content is served the file can be found at url/filename.
             </p>
             <SyntaxHighlighter
               language="javascript"
               style={atomDark}
-            >{`app.static(*filePath*)`}</SyntaxHighlighter>
-            <p>
-              Amet non excepteur ut fugiat ullamco nostrud ea Lorem. Nostrud
-              labore consequat nostrud qui officia do exercitation exercitation
-              officia incididunt minim excepteur. Ut consequat quis aute
-              adipisicing non amet sit esse irure ex occaecat Lorem dolore
-              laboris. Non Lorem excepteur aute commodo voluptate velit nostrud
-              incididunt.
-            </p>
+            >{`const pathToStatic = path.join(__dirname, "..", "..", "static");
+
+if (!fs.existsSync(pathToStatic)) {
+  console.error("Server offline!");                    
+  process.exit(1);
+}
+                        
+app.static(pathToStatic)`}</SyntaxHighlighter>
           </div>
         </div>
       </div>
