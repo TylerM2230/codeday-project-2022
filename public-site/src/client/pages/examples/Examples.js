@@ -41,7 +41,7 @@ const Examples = () => {
               imported using the require() syntax and an instance of it is
               called and referred to as app by convention. A route for a GET
               request is then configured using the makeGetRequest() method. The
-              '/'' denotes the home page and the callback functions sends the
+              '/' denotes the home page and the callback functions sends the
               text "Hello World!" as a response.
             </p>
             <SyntaxHighlighter
