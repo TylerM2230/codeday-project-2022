@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegCopy, FaDollarSign } from "react-icons/fa";
+import { FaRegCopy, FaDollarSign, FaBookOpen } from "react-icons/fa";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import "./Home.css";
@@ -53,7 +53,10 @@ const Home = () => {
           to="/docs"
           exact
         >
-          Read Docs
+          <div className="d-inline-flex gap-1 align-items-center">
+            <FaBookOpen size={25} />
+            Read Docs
+          </div>
         </NavLink>
       </div>
       <p className="text-center text-muted mb-0 fs-10 p-0">
