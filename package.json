@@ -9,7 +9,7 @@
     "public-site"
   ],
   "scripts": {
-    "heroku-postbuild": "yarn workspace public-site build",
+    "build": "yarn workspace public-site build",
     "start": "yarn workspace public-site start"
   }
 }
